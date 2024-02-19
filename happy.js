@@ -75,7 +75,7 @@ function disableDevOptions() {
     document.addEventListener('contextmenu', event => event.preventDefault());
     // Disable keyboard shortcuts
     document.addEventListener('keydown', event => {
-        if (event.ctrlKey && (event.key === 'c' || event.key === 'u' || event.key === 'i' || event.key === 'j')) {
+        if (event.ctrlKey || event.altKey || event.shiftKey || event.commandKey && (event.key === 'c' || event.key === 'u' || event.key === 'i' || event.key === 'j')) {
             event.preventDefault();
         }
     });
@@ -87,7 +87,7 @@ function enableDevOptions() {
     document.removeEventListener('contextmenu', event => event.preventDefault());
     // Allow keyboard shortcuts
     document.removeEventListener('keydown', event => {
-        if (event.ctrlKey && (event.key === 'c' || event.key === 'u' || event.key === 'i' || event.key === 'j')) {
+        if (event.ctrlKey || event.altKey || event.shiftKey || event.commandKey && (event.key === 'c' || event.key === 'u' || event.key === 'i' || event.key === 'j')) {
             event.preventDefault();
         }
     });
