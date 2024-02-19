@@ -47,7 +47,7 @@ function noButton() {
 }
 
 // Define the correct password
-const correctPassword = "your_password"; // Change this to your desired password
+const correctPassword = "20001214"; // Change this to your desired password
 
 function checkPassword() {
     // Get the value entered in the password input field
