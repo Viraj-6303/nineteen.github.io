@@ -45,3 +45,50 @@ function noButton() {
         alert("Pretttyyyyy Pleaaaaaseeeeeeeeeee 😭😭😭😭😭😭")
     }
 }
+
+// Define the correct password
+const correctPassword = "your_password"; // Change this to your desired password
+
+function checkPassword() {
+    // Get the value entered in the password input field
+    const enteredPassword = document.getElementById("pass").value;
+
+    // If the entered password matches the correct password
+    if (enteredPassword === correctPassword) {
+        document.getElementById("password").style.display = "none";
+
+        // Show the main section
+        document.getElementById("main_container").style.display = "flex";
+        // Enable developer options
+        enableDevOptions();
+    } else {
+        // Hide the main section
+        document.getElementById("main_container").style.display = "none";
+        // Disable developer options
+        disableDevOptions();
+    }
+}
+
+// Function to disable developer options
+function disableDevOptions() {
+    // Prevent right-click menu
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    // Disable keyboard shortcuts
+    document.addEventListener('keydown', event => {
+        if (event.ctrlKey && (event.key === 'c' || event.key === 'u' || event.key === 'i' || event.key === 'j')) {
+            event.preventDefault();
+        }
+    });
+}
+
+// Function to enable developer options
+function enableDevOptions() {
+    // Allow right-click menu
+    document.removeEventListener('contextmenu', event => event.preventDefault());
+    // Allow keyboard shortcuts
+    document.removeEventListener('keydown', event => {
+        if (event.ctrlKey && (event.key === 'c' || event.key === 'u' || event.key === 'i' || event.key === 'j')) {
+            event.preventDefault();
+        }
+    });
+}
