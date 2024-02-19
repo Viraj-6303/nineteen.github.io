@@ -106,4 +106,10 @@ body {
     body {
         background-position: center;
     }
+
+    #letter_container {
+        max-width: 95vw;
+        padding: 5px;
+        margin: 5px;
+    }
 }
