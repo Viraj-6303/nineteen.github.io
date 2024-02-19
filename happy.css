@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    transition: 0.5s ease;
+}
+
+body {
+    background-color: aliceblue;
+    background-image: url("img/Dhans.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+}
+
+.main, .buttons, .letter_body, #question {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.main, .letter_body, #question {
+    flex-direction: column;
+    padding: 20px;
+}
+
+#question * {
+    color: white;
+}
+
+.buttons {
+    flex-direction: row;
+}
+
+.buttons a {
+    margin-right: 10px;
+}
+
+
+#main_heading {
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    font-family: "Roboto", sans-serif;
+    border: grey;
+    box-shadow: 0px 0px 3px 3px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.letter {
+    
+    font-size: 24px;
+    background-color: maroon;
+    border: 1px solid gold;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 0px 5px 5px;
+}
+
+.letter, .letter * {
+    color: gold;
+    font-family: "Bonheur Royale", cursive;
+}
+
+#letter_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: maroon;
+    border: 1px solid brown;
+    box-shadow: 0px 0px 5px 5px;
+    border-radius: 5px;
+    max-width: 80vw;
+    margin: 20px;
+    padding: 20px;
+    
+    
+}
+
+.hidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.visible {
+    opacity: 0.7;
+    height: auto;
+}
+
+#final {
+    font-family: "Montserrat", sans-serif;
+}
